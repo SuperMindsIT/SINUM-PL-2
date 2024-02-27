@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nobile:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <title>PL2 first-page</title>
+</head>
+<body class="bg-gradient-to-r from-[#282F42] to-[#2A427F] text-white font-sans font-normal" style="font-family: 'Nobile', sans-serif;">
+    <div class="steps flex flex-col items-center justify-center">
+        <span class="flex mt-20 md:w-[29vw] mb-[1rem] text-sm">Krok 1 of 2</span>
+        <div class="stepline w-[40vw] flex gap-3 justify-center">
+          <div class="rectangle1 rounded-2xl bg-gradient-to-r from-blue-500 to-indigo-600 w-[275px] h-1"></div>
+          <div class="rectangle1 rounded-2xl bg-gradient-to-r from-[#6D7DAF] to-[#B5C7FF] w-[275px] h-1"></div>
+        </div>
+      </div>
+      <div class="flex justify-center items-center text-center mt-12" id="loader">
+        <img class="h-72" loop src="img/Comp_1.gif" id="loader-gif" alt="" />
+      </div>
+      <p class="heading px-2.5 mt-10 flex justify-center text-2xl text-center">
+        Wprowadż swój numer telefonu:<br />
+        Przygotuj telefon, za chwilę otrzymasz wiadomość z kodem PIN, którym
+        zatwierdzisz zamówienie.
+      </p>
+      <div
+      class="inputn h14 flex justify-center items-center text-center mt-8 px-2.5"
+    >
+      <div
+        class="phoneicon rounded-l-xl flex justify-center bg-gradient-to-r from-[#506295] to-[#374976]  items-center text-center h-12 w-12"
+      >
+        <img class="h-[50%]" src="img/phoneasset.svg" alt="" />
+      </div>
+      <input
+        class="inputph bg-gradient-to-r from-[#506295] to-[#374976] rounded-r-xl pl-3 h-12 w-60 "
+        type="text"
+        placeholder="_ _ _ _ _ _ _ _ _ _ _"
+        id="inputField"
+        name="inputField"
+      />
+    </div>
+    <div
+      class="pt-3 pb-3 text-red flex text-center justify-center"
+      id="errorMessage"
+    ></div>
+
+    <div
+      class="downloadbtn px-2.5 flex justify-center items-center text-center"  
+    >
+      <button
+        class="btndm rounded-xl bg-gradient-to-r from-[#265ECF] to-[#4580EF] h-12 w-72 flex justify-center items-center text-center"
+        id="redirectButton"
+        type="submit"
+        value="redirect"
+        onclick="return validateInput()"
+      >
+        DALEJ!
+      </button>
+    </div>
+    <div
+      class="footer px-2.5 text-white bg-black w-[100%] h-66 mt-[20rem] font12_12 text-xs"
+    >
+      <p class="center text-center pt-6 pb-6">
+        Traffic Lynx Ltd <br />Aktywuj dostęp do:<br />WORKOUTNOW<br />za 10 zł
+      </p>
+      <p class="center text-center pb-6">
+        Oplata będzie pobierana co tydzeń Usługę możesz dezaktywować poprzez:
+        STOP WORK na 80708 (Orange) lub 80425 (T-Mobile / Plus).
+      </p>
+      <p class="center text-center pb-6">
+        Opłata zostanie doliczona do Twojego rachunku u twojego operatora
+        (telefon na abonament) lub odliczona od środków na koncie (telefon na
+        kartę).Wprowadż swój numer telefonu:
+      </p>
+      <p class="center text-center pb-6">
+        Przygotuj telefon, za chwilę otrzymasz wiadomość z kodem PIN, którym
+        zatwierdzisz zamówienie.
+      </p>
+      <p class="flex gap-3 justify-center center text-center pb-6">
+        <a href="">REGULAMIN</a><a>POLITYKA PRYWATNOŚCI</a>
+      </p>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("redirectButton")
+          .addEventListener("click", validateInput);
+      });
+
+      function validateInput() {
+        let input = document.getElementById("inputField").value.trim();
+        let errorMessageElement = document.getElementById("errorMessage");
+        if (input === "") {
+          errorMessageElement.textContent =
+            "Please Enter your Phone Number to proceed.";
+        } else if (isNaN(input)) {
+          errorMessageElement.textContent =
+            "Enter your phone number in correct format";
+        } else {
+          errorMessageElement.textContent = "";
+          redirect();
+        }
+      }
+
+      function redirect() {
+        window.location.href = "secondpage.html";
+      }
+         var random = Math.random();
+          document.getElementById('loader-gif').src = "img/Comp_1.gif?" + random;
+    </script>
+</body>
+</html>
